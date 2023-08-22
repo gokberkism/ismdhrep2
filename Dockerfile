@@ -1,6 +1,6 @@
 # syntax=docker/dockerfile:1
 FROM busybox:latest
-COPY --chmod=755 <<EOF /app/run.sh
+COPY --chmod=750 <<EOF /app/run.sh
 #!/bin/sh
 while true; do
   echo -ne "The time is now $(date +%T)\\r"
